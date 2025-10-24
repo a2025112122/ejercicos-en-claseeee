@@ -1,0 +1,39 @@
+float total_ventas(float p, int c);
+void dia(int dia_num);
+
+int main(){
+float precio,tot_sem=0,tot_diario=0;
+int cantidad,cont_dia=1,cont_ventas=1;
+char s,n;
+
+cout<< fixed <<setprecision(2);
+while(cont_dia<=7){
+    tot_diario=0
+    cont_ventas=1
+dia(int dia_num);
+count<<endl; 
+
+}
+cout<<"ingrese el precio unitario del producto:";
+cin>>precio;
+cout<<"ingrese la cantidad vendida";
+cin>>cantidad;
+float total=total_diario(precio,cantidad);
+
+cout<< "\nTotal de la venta: Bs." <<total<< endl;
+return 0;
+}
+float total_diario(float p, int c){
+return p*c;
+}
+void dia(int dia_num);{
+swich(dia_num){
+case 1: count<< "lunes"; break;
+case 2: count<< "martes"; break;
+case 3: count<< "miercoles"; break;
+case 4: count<< "jueves"; break;
+case 5: count<< "viernes"; break;
+case 6: count<< "sabado"; break;
+case 7: count<< "domingo"; break;
+}
+}
