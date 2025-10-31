@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void aplicardescuento(double &monto);
+void totalconiva(double &monto);
+int main(){
+double totalcompra;
+
+cout<< "ingrese el total de la compra del cliente: bs";
+cin>> totalcompra;
+aplicardescuento(totalcompra);
+cout<<"total con decuento aplicado: bs"<<totalcompra<<endl;
+totalconiva(totalcompra);
+cout<<"total final a pagar (descuento + IVA): bs"<<totalcompra<<endl;
+return 0;
+}
+
+void aplicardescuento(double &monto){
+double descuento = monto*0.10;
+monto=monto-descuento;
+
+}
+void totalconiva(double &monto){
+monto*=1.13;//monto=monto*iva
+}
