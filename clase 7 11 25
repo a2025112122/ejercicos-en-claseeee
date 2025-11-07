@@ -44,6 +44,8 @@ string decena(int n){
 string numeroAtexto (int j){
     if(j==0) return "cero";
     if(j<100)return decena(j);
+    if (j < 1000) return "numero demasiado grande"; 
+  
 }
 
 string literal(float r){
