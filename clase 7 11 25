@@ -1,0 +1,55 @@
+//hacer que si metes 123 que salga error solo funciona con num hasta 100, el programa  convierte num a textos literal
+#include <iostream>
+#include<cmath>
+#include <string>
+using namespace std;
+
+string unidad(int n);
+string decena(int n);
+string numeroAtexto (int j);
+string literal(float r);
+
+
+int main(){
+    float r;
+cout<<"ingrese un num para convertitlo a texto:";
+cin>>r;
+cout<< literal(r)<<endl;
+	return 0;
+}
+
+string unidad(int n){
+    string u[]={"","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve"};
+    return u[n];
+}
+
+string decena(int n){
+    string d[]={"","diez", "veinte", "teinta", "cuarenta", "cincuenta", "sesenta","setenta","ochenta","noventa"};
+    if(n<10) return unidad(n);
+    int t = n/10;
+    int u =n%10;
+    if(n==11) return "once";
+    if(n==12) return "doce";
+    if(n==13) return "trece";
+    if(n==14) return "catorce";
+    if(n==15) return "quince";
+    if(n==16) return "dieciseis";
+    if(n==17) return "diecisiete";
+    if(n==18) return "dieciocho";
+    if(n==19) return "diecinueve";
+    if(u==0) return d[t];
+    return d[t] + " y " + unidad(u);
+}
+
+string numeroAtexto (int j){
+    if(j==0) return "cero";
+    if(j<100)return decena(j);
+}
+
+string literal(float r){
+    int entero=(int)r;
+    int decimal= round((r-entero)*100);
+    string texto= numeroAtexto(entero);
+    
+    return texto + "" + to_string(decimal)+"/100 bolivianos";
+}
